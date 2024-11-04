@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SegitigaActivity">
+    tools:context=".TrapesiumActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/ic_back"
-            app:title="Segitiga"
+            app:title="Trapesium"
             app:titleTextColor="@android:color/white">
         </androidx.appcompat.widget.Toolbar>
 
@@ -37,11 +37,11 @@
             android:paddingBottom="400dp"
             >
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rumus_segitiga"
-            tools:ignore="MissingConstraints" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rumus_trapesium"
+                tools:ignore="MissingConstraints" />
 
 
             <LinearLayout
@@ -57,31 +57,38 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Hitung Keliling Segitiga"
+                    android:text="Hitung Keliling Trapesium"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     />
 
                 <EditText
-                    android:id="@+id/nilai_ab"
+                    android:id="@+id/nilai_a"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nilai AB"
+                    android:hint="nilai a"
                     android:layout_marginTop="10dp"
                     />
                 <EditText
-                    android:id="@+id/nilai_bc"
+                    android:id="@+id/nilai_b"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nilai BC"
+                    android:hint="nilai b"
                     android:layout_marginTop="10dp"
                     />
 
                 <EditText
-                    android:id="@+id/nilai_ca"
+                    android:id="@+id/nilai_c"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nilai CA"
+                    android:hint="nilai c"
+                    android:layout_marginTop="10dp"
+                    />
+                <EditText
+                    android:id="@+id/nilai_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="nilai d"
                     android:layout_marginTop="10dp"
                     />
                 <TextView
@@ -133,23 +140,30 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Hitung Luas Segitiga"
+                    android:text="Hitung Luas Trapesium"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     />
 
                 <EditText
-                    android:id="@+id/nilai_alas"
+                    android:id="@+id/nilai_a2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nilai Alas"
+                    android:hint="nilai a"
+                    android:layout_marginTop="10dp"
+                    />
+                <EditText
+                    android:id="@+id/nilai_b2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="nilai b"
                     android:layout_marginTop="10dp"
                     />
                 <EditText
                     android:id="@+id/nilai_tinggi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nilai Tinggi"
+                    android:hint="nilai tinggi"
                     android:layout_marginTop="10dp"
                     />
 

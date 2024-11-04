@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SegitigaActivity">
+    tools:context=".JajargenjangActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/ic_back"
-            app:title="Segitiga"
+            app:title="Jajar Genjang"
             app:titleTextColor="@android:color/white">
         </androidx.appcompat.widget.Toolbar>
 
@@ -37,11 +37,11 @@
             android:paddingBottom="400dp"
             >
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rumus_segitiga"
-            tools:ignore="MissingConstraints" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rumus_jajar_genjang"
+                tools:ignore="MissingConstraints" />
 
 
             <LinearLayout
@@ -57,33 +57,26 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Hitung Keliling Segitiga"
+                    android:text="Hitung Keliling Jajar Genjang"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     />
 
                 <EditText
-                    android:id="@+id/nilai_ab"
+                    android:id="@+id/nilai_a"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nilai AB"
+                    android:hint="nilai a"
                     android:layout_marginTop="10dp"
                     />
                 <EditText
-                    android:id="@+id/nilai_bc"
+                    android:id="@+id/nilai_b"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nilai BC"
+                    android:hint="nilai b"
                     android:layout_marginTop="10dp"
                     />
 
-                <EditText
-                    android:id="@+id/nilai_ca"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Nilai CA"
-                    android:layout_marginTop="10dp"
-                    />
                 <TextView
                     android:id="@+id/keliling_hasil"
                     android:layout_width="match_parent"
@@ -133,7 +126,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Hitung Luas Segitiga"
+                    android:text="Hitung Luas Jajar Genjang"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     />
@@ -142,14 +135,15 @@
                     android:id="@+id/nilai_alas"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nilai Alas"
+                    android:hint="nilai alas"
                     android:layout_marginTop="10dp"
                     />
+
                 <EditText
                     android:id="@+id/nilai_tinggi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nilai Tinggi"
+                    android:hint="nilai tinggi"
                     android:layout_marginTop="10dp"
                     />
 

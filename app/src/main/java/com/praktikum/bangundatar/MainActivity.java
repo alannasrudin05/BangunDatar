@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
         CardView btnSegitiga = findViewById(R.id.segitiga);
         CardView btnPersegi = findViewById(R.id.persegi);
+        CardView btnPersegiPanjang = findViewById(R.id.persegi_panjang);
+        CardView btnLingkaran = findViewById(R.id.lingkaran);
+        CardView btnJajarGenjang = findViewById(R.id.jajar_genjang);
+        CardView btnTrapesium = findViewById(R.id.trapesium);
 
         btnSegitiga.setOnClickListener(v ->{
 
@@ -34,11 +38,41 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-
-
         btnPersegi.setOnClickListener(v ->{
 
             Intent intent = new Intent(MainActivity.this, PersegiActivity.class);
+
+            startActivity(intent);
+
+        });
+
+        btnPersegiPanjang.setOnClickListener(v ->{
+
+            Intent intent = new Intent(MainActivity.this, PersegiPanjangActivity.class);
+
+            startActivity(intent);
+
+        });
+
+        btnLingkaran.setOnClickListener(v ->{
+
+            Intent intent = new Intent(MainActivity.this, LingkaranActivity.class);
+
+            startActivity(intent);
+
+        });
+
+        btnJajarGenjang.setOnClickListener(v ->{
+
+            Intent intent = new Intent(MainActivity.this, JajargenjangActivity.class);
+
+            startActivity(intent);
+
+        });
+
+        btnTrapesium.setOnClickListener(v ->{
+
+            Intent intent = new Intent(MainActivity.this, TrapesiumActivity.class);
 
             startActivity(intent);
 

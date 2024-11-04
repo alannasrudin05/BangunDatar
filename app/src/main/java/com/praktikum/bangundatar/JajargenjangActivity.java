@@ -1,8 +1,6 @@
 package com.praktikum.bangundatar;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.telephony.PhoneNumberUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,36 +13,28 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.util.Locale;
+public class JajargenjangActivity extends AppCompatActivity {
 
-import kotlin.reflect.KFunction;
-
-public class SegitigaActivity extends AppCompatActivity {
-
-    private EditText nilaiAb, nilaiBc, nilaiCa, nilaiAlas, nilaiTinggi;
+    private EditText nilaiA, nilaiB, nilaiAlas, nilaiTinggi;
     private TextView kelilingHasil, luasHasil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_segitiga);
+        setContentView(R.layout.activity_jajargenjang);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        nilaiAb = findViewById(R.id.nilai_ab);
-        nilaiBc = findViewById(R.id.nilai_bc);
-        nilaiCa = findViewById(R.id.nilai_ca);
+        nilaiA = findViewById(R.id.nilai_a);
+        nilaiB = findViewById(R.id.nilai_b);
         kelilingHasil = findViewById(R.id.keliling_hasil);
         nilaiAlas = findViewById(R.id.nilai_alas);
         nilaiTinggi = findViewById(R.id.nilai_tinggi);
         luasHasil = findViewById(R.id.luas_hasil);
-
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -56,28 +46,15 @@ public class SegitigaActivity extends AppCompatActivity {
             }
         });
 
-
-//         Mendapatkan Intent yang memulai aktivitas ini
-//        Intent intent = getIntent();
-
-        // Mendapatkan data tambahan dari Intent
-//        String nama = intent.getStringExtra("key_nama");
-//        int umur = intent.getIntExtra("key_umur", 0); // 0 adalah nilai default jika data tidak ditemukan
-
-        // Menampilkan data tambahan di TextView
-//        TextView textView = findViewById(R.id.text_view);
-//        textView.setText("Nama: " + nama + ", Umur: " + umur);
-
-
     }
+
 
     public void hitungKeliling(View view) {
         try {
-            double ab = Double.parseDouble(nilaiAb.getText().toString());
-            double bc = Double.parseDouble(nilaiBc.getText().toString());
-            double ca = Double.parseDouble(nilaiCa.getText().toString());
+            double a = Double.parseDouble(nilaiA.getText().toString());
+            double b = Double.parseDouble(nilaiB.getText().toString());
 
-            double keliling = ab + bc + ca;
+            double keliling = 2 * (a + b) ;
 
 
 
@@ -95,7 +72,7 @@ public class SegitigaActivity extends AppCompatActivity {
             double alas = Double.parseDouble(nilaiAlas.getText().toString());
             double tinggi = Double.parseDouble(nilaiTinggi.getText().toString());
 
-            double luas = 0.5 * alas * tinggi;
+            double luas = alas * tinggi;
 
 
 
@@ -109,9 +86,8 @@ public class SegitigaActivity extends AppCompatActivity {
     }
 
     public void resetInput(View view) {
-        nilaiAb.getText().clear();
-        nilaiBc.getText().clear();
-        nilaiCa.getText().clear();
+        nilaiA.getText().clear();
+        nilaiB.getText().clear();
         kelilingHasil.setText("");
         kelilingHasil.setVisibility(View.GONE); // Menyembunyikan TextView kembali
     }
@@ -122,4 +98,6 @@ public class SegitigaActivity extends AppCompatActivity {
         luasHasil.setText("");
         luasHasil.setVisibility(View.GONE); // Menyembunyikan TextView kembali
     }
+
+
 }

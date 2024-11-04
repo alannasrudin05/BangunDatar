@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -13,35 +12,34 @@
         android:id="@+id/top_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-
-        />
+        android:background="@drawable/bg_view"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_marginTop="-170dp"
         android:layout_marginBottom="20dp"
-        android:orientation="vertical"
 
         >
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Pilih"
-            android:textColor="@color/white"
             android:textSize="50sp"
-            android:textStyle="bold" />
-
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Bangun Datar"
-            android:textColor="@color/white"
             android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
     </LinearLayout>
 
 
@@ -50,116 +48,117 @@
         android:layout_height="match_parent"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="25dp"
+        android:rowCount="3"
         android:columnCount="2"
-        android:rowCount="3">
+        >
 
         <androidx.cardview.widget.CardView
             android:id="@+id/segitiga"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_row="0"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
             android:layout_rowWeight="1"
-            android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_margin="12dp"
+            android:layout_row="0"
+            android:layout_column="0"
             app:cardCornerRadius="15dp"
+            android:layout_margin="12dp"
+            android:layout_gravity="fill"
             app:cardElevation="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:orientation="vertical">
-
+                >
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/segitiga"
                     tools:ignore="ContentDescription" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Segitiga"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/persegi"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_row="0"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
             android:layout_rowWeight="1"
-            android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_margin="12dp"
+            android:layout_row="0"
+            android:layout_column="1"
             app:cardCornerRadius="15dp"
+            android:layout_margin="12dp"
+            android:layout_gravity="fill"
             app:cardElevation="12dp">
 
             <LinearLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:orientation="vertical">
-
+                >
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/persegi"
                     tools:ignore="ContentDescription" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Persegi"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/persegi_panjang"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_row="1"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
             android:layout_rowWeight="1"
-            android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_margin="12dp"
+            android:layout_row="1"
+            android:layout_column="0"
             app:cardCornerRadius="15dp"
+            android:layout_margin="12dp"
+            android:layout_gravity="fill"
             app:cardElevation="12dp">
 
             <LinearLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
                 android:orientation="vertical"
+                android:gravity="center"
 
                 >
-
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/persegi_panjang" />
-
+                    android:src="@drawable/persegi_panjang"
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Persegi Panjang"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -167,38 +166,38 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/lingkaran"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_row="1"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
             android:layout_rowWeight="1"
-            android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_margin="12dp"
+            android:layout_row="1"
+            android:layout_column="1"
             app:cardCornerRadius="15dp"
+            android:layout_margin="12dp"
+            android:layout_gravity="fill"
             app:cardElevation="12dp">
 
             <LinearLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
                 android:orientation="vertical"
+                android:gravity="center"
 
                 >
-
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/lingkaran" />
-
+                    android:src="@drawable/lingkaran"
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Lingkaran"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -206,76 +205,76 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/trapesium"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_row="2"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
             android:layout_rowWeight="1"
-            android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_margin="12dp"
+            android:layout_row="2"
+            android:layout_column="0"
             app:cardCornerRadius="15dp"
+            android:layout_margin="12dp"
+            android:layout_gravity="fill"
             app:cardElevation="12dp">
 
             <LinearLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
                 android:orientation="vertical"
+                android:gravity="center"
 
                 >
-
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/trapesium" />
-
+                    android:src="@drawable/trapesium"
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Trapesium"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/jajar_genjang"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_row="2"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
             android:layout_rowWeight="1"
-            android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_margin="12dp"
+            android:layout_row="2"
+            android:layout_column="1"
             app:cardCornerRadius="15dp"
+            android:layout_margin="12dp"
+            android:layout_gravity="fill"
             app:cardElevation="12dp">
 
             <LinearLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
                 android:orientation="vertical"
+                android:gravity="center"
 
                 >
-
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/jajar_genjang" />
-
+                    android:src="@drawable/jajar_genjang"
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jajar Genjang"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

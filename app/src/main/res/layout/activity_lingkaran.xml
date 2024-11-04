@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PersegiActivity">
+    tools:context=".LingkaranActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/ic_back"
-            app:title="Persegi"
+            app:title="Lingkaran"
             app:titleTextColor="@android:color/white">
         </androidx.appcompat.widget.Toolbar>
 
@@ -40,7 +40,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/rumus_persegi"
+                android:src="@drawable/rumus_lingkaran"
                 tools:ignore="MissingConstraints" />
 
 
@@ -57,18 +57,19 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Hitung Persegi"
+                    android:text="Hitung Lingkaran"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     />
 
                 <EditText
-                    android:id="@+id/nilai_sisi"
+                    android:id="@+id/nilai_jari"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="nilai sisi"
+                    android:hint="nilai jari-jari"
                     android:layout_marginTop="10dp"
                     />
+
 
                 <TextView
                     android:id="@+id/keliling_hasil"
@@ -135,6 +136,7 @@
         </LinearLayout>
 
     </ScrollView>
+
 
 
 </LinearLayout>

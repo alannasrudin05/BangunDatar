@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SegitigaActivity">
+    tools:context=".PersegiPanjangActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/ic_back"
-            app:title="Segitiga"
+            app:title="Persegi Panjang"
             app:titleTextColor="@android:color/white">
         </androidx.appcompat.widget.Toolbar>
 
@@ -37,11 +37,11 @@
             android:paddingBottom="400dp"
             >
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rumus_segitiga"
-            tools:ignore="MissingConstraints" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rumus_persegi_panjang"
+                tools:ignore="MissingConstraints" />
 
 
             <LinearLayout
@@ -57,33 +57,26 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Hitung Keliling Segitiga"
+                    android:text="Hitung Persegi Panjang"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     />
 
                 <EditText
-                    android:id="@+id/nilai_ab"
+                    android:id="@+id/nilai_panjang"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nilai AB"
+                    android:hint="nilai panjang"
                     android:layout_marginTop="10dp"
                     />
                 <EditText
-                    android:id="@+id/nilai_bc"
+                    android:id="@+id/nilai_lebar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nilai BC"
+                    android:hint="nilai lebar"
                     android:layout_marginTop="10dp"
                     />
 
-                <EditText
-                    android:id="@+id/nilai_ca"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Nilai CA"
-                    android:layout_marginTop="10dp"
-                    />
                 <TextView
                     android:id="@+id/keliling_hasil"
                     android:layout_width="match_parent"
@@ -92,67 +85,6 @@
                     android:textSize="18sp"
                     android:visibility="gone"
                     />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    >
-
-                    <Button
-                        android:id="@+id/btn_reset"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginEnd="40dp"
-                        android:text="Reset"
-                        android:onClick="resetInput"
-                        />
-                    <Button
-                        android:id="@+id/btn_hitungKeliling"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginEnd="40dp"
-                        android:text="Hitung"
-                        android:onClick="hitungKeliling"
-                        />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="40dp"
-
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Hitung Luas Segitiga"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    />
-
-                <EditText
-                    android:id="@+id/nilai_alas"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Nilai Alas"
-                    android:layout_marginTop="10dp"
-                    />
-                <EditText
-                    android:id="@+id/nilai_tinggi"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Nilai Tinggi"
-                    android:layout_marginTop="10dp"
-                    />
-
                 <TextView
                     android:id="@+id/luas_hasil"
                     android:layout_width="match_parent"
@@ -165,26 +97,44 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:gravity="center"
                     >
 
                     <Button
-                        android:id="@+id/btn_reset1"
+                        android:id="@+id/btn_hitungKeliling"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginEnd="40dp"
-                        android:text="Reset"
-                        android:onClick="resetInput2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Hitung Keliling"
+                        android:onClick="hitungKeliling"
                         />
                     <Button
                         android:id="@+id/btn_hitungLuas"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginEnd="40dp"
-                        android:text="Hitung"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Hitung Luas"
                         android:onClick="hitungLuas"
                         />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <Button
+                        android:id="@+id/btn_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reset"
+
+                        android:onClick="resetInput"
+                        />
+
                 </LinearLayout>
 
             </LinearLayout>

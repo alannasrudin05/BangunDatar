@@ -1,8 +1,6 @@
 package com.praktikum.bangundatar;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.telephony.PhoneNumberUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,33 +13,28 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.util.Locale;
+public class TrapesiumActivity extends AppCompatActivity {
 
-import kotlin.reflect.KFunction;
-
-public class SegitigaActivity extends AppCompatActivity {
-
-    private EditText nilaiAb, nilaiBc, nilaiCa, nilaiAlas, nilaiTinggi;
+    private EditText nilaiA, nilaiB, nilaiC,  nilaiD, nilaiA2, nilaiB2, nilaiTinggi;
     private TextView kelilingHasil, luasHasil;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_segitiga);
+        setContentView(R.layout.activity_trapesium);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        nilaiAb = findViewById(R.id.nilai_ab);
-        nilaiBc = findViewById(R.id.nilai_bc);
-        nilaiCa = findViewById(R.id.nilai_ca);
+        nilaiA = findViewById(R.id.nilai_a);
+        nilaiB = findViewById(R.id.nilai_b);
+        nilaiC = findViewById(R.id.nilai_c);
+        nilaiD = findViewById(R.id.nilai_d);
         kelilingHasil = findViewById(R.id.keliling_hasil);
-        nilaiAlas = findViewById(R.id.nilai_alas);
+        nilaiA2 = findViewById(R.id.nilai_a2);
+        nilaiB2 = findViewById(R.id.nilai_b2);
         nilaiTinggi = findViewById(R.id.nilai_tinggi);
         luasHasil = findViewById(R.id.luas_hasil);
 
@@ -57,27 +50,17 @@ public class SegitigaActivity extends AppCompatActivity {
         });
 
 
-//         Mendapatkan Intent yang memulai aktivitas ini
-//        Intent intent = getIntent();
-
-        // Mendapatkan data tambahan dari Intent
-//        String nama = intent.getStringExtra("key_nama");
-//        int umur = intent.getIntExtra("key_umur", 0); // 0 adalah nilai default jika data tidak ditemukan
-
-        // Menampilkan data tambahan di TextView
-//        TextView textView = findViewById(R.id.text_view);
-//        textView.setText("Nama: " + nama + ", Umur: " + umur);
-
-
     }
+
 
     public void hitungKeliling(View view) {
         try {
-            double ab = Double.parseDouble(nilaiAb.getText().toString());
-            double bc = Double.parseDouble(nilaiBc.getText().toString());
-            double ca = Double.parseDouble(nilaiCa.getText().toString());
+            double a = Double.parseDouble(nilaiA.getText().toString());
+            double b = Double.parseDouble(nilaiB.getText().toString());
+            double c = Double.parseDouble(nilaiC.getText().toString());
+            double d = Double.parseDouble(nilaiD.getText().toString());
 
-            double keliling = ab + bc + ca;
+            double keliling = a + b + c + d;
 
 
 
@@ -92,10 +75,11 @@ public class SegitigaActivity extends AppCompatActivity {
 
     public void hitungLuas(View view) {
         try {
-            double alas = Double.parseDouble(nilaiAlas.getText().toString());
+            double a2 = Double.parseDouble(nilaiA2.getText().toString());
+            double b2 = Double.parseDouble(nilaiB2.getText().toString());
             double tinggi = Double.parseDouble(nilaiTinggi.getText().toString());
 
-            double luas = 0.5 * alas * tinggi;
+            double luas = 0.5 * (a2 + b2) * tinggi;
 
 
 
@@ -109,17 +93,20 @@ public class SegitigaActivity extends AppCompatActivity {
     }
 
     public void resetInput(View view) {
-        nilaiAb.getText().clear();
-        nilaiBc.getText().clear();
-        nilaiCa.getText().clear();
+        nilaiA.getText().clear();
+        nilaiB.getText().clear();
+        nilaiC.getText().clear();
+        nilaiD.getText().clear();
         kelilingHasil.setText("");
         kelilingHasil.setVisibility(View.GONE); // Menyembunyikan TextView kembali
     }
 
     public void resetInput2(View view) {
-        nilaiAlas.getText().clear();
+        nilaiA2.getText().clear();
+        nilaiB2.getText().clear();
         nilaiTinggi.getText().clear();
         luasHasil.setText("");
         luasHasil.setVisibility(View.GONE); // Menyembunyikan TextView kembali
     }
+
 }
